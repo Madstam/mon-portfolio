@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+/* Palette de base (mode clair) */
+:root {
+  --primary: #3b0ae0;
+  --secondary: #ff8c00;
+  --background: #f5f8ff;
+  --text: #1e1e2f;
+  --card-bg: #0b0132;
+}
+
+/* Thème sombre */
+body.dark-mode {
+  --primary: #1b1b40;
+  --secondary: #ffa84c;
+  --background: #0f0f1a;
+  --text: #f5f5f5;
+  --card-bg: #1c1c3c;
+}
+
+/* Style global */
+body { 
+  font-family: 'Roboto Mono', monospace;
+  font-size: 17px;
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary), #240080);
+  color: white;
+  padding: 60px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: relative;
+  min-height: 200px;
+}
+
+header figure {
+  margin: 0 0 15px 0;
+}
+
+header figure img {
+  width: 140px;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid var(--secondary);
+  transition: transform 0.3s ease;
+}
+header figure img:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+header figure figcaption {
+  margin-top: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #fafafa;
+  letter-spacing: 1px;
+}
+
+/* Bouton de changement de thème */
+.theme-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.theme-toggle:hover {
+  background: #ffb366;
+}
+
+/* NAVIGATION */
+nav {
+  text-align: center;
+  background-color: #f8f9ff;
+  padding: 10px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+body.dark-mode nav {
+  background-color: #1a1a33;
+}
+
+nav a {
+  color: var(--primary);
+  margin: 0 15px;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--secondary);
+}
+
+
+/* MAIN */
+main {
+  padding: 40px 20px;
+}
+
+section h2 {
+  color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+section p {
+  color: var(--text);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+/* CARDS */
+.grid-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  color: #f2f2ff; /* ✅ texte clair en mode jour */
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s, color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.card:hover {
+  transform: scale(1.08);
+  color: white;
+  text-shadow: 0 0 8px rgba(255,255,255,0.8);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: var(--primary);
+  color: white;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+footer a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Amélioration du contraste en mode sombre */
+body.dark-mode header {
+  background: linear-gradient(135deg, #1a1a33, #000022);
+  color: #ffffff;
+}
+body.dark-mode footer {
+  background-color: #1a1a33;
+  color: #e0e0e0;
+}
+body.dark-mode a {
+  color: #ffb366;
+}
+
+/*  RESPONSIVITÉ */
+@media (max-width: 768px) {
+  header figure img {
+    width: 100px;
+  }
+
+  .grid-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    max-width: 300px;
+    height: 150px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .theme-toggle {
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+  }
+}
+body.dark-mode .card {
+  color: #e0e0ff; /* légèrement plus doux en mode sombre */
+}
+body.dark-mode nav a {
+  color: #e0e0ff; /* texte clair par défaut dans la nav */
+}
+
+body.dark-mode nav a:hover {
+  color: var(--secondary); /* hover bien visible (orange) */
+}

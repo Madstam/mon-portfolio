@@ -1,0 +1,495 @@
+/* Palette de couleurs : Rouge vin bordeaux et Rose
+
+  rouge-vin: #722F37;
+  bordeaux: #8B3A4A;
+  rose-fonce: #B85C6B; 
+  rose-clair: #E8B4C4;
+  rose-pale: #F5D6E4;
+  blanc: #FFFFFF;
+  texte-fonce: #4A1F26; */
+
+header {
+  background: #722F37 ;
+  color: white;
+  padding: 25px 20px ;
+  text-align: left;
+  border-bottom: 6px solid rgb(45, 1, 1) ;
+  overflow: auto;
+}
+/* Navigation principale */
+nav { 
+  text-align: center ;
+  padding: 15px 0 ;
+    
+}
+
+nav a {
+  color: #722F37;
+  margin: 0 15px;
+  font-weight: bold;
+  text-decoration : none  ; 
+  padding: 8px 30px ;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  color: white ;
+  background-color: #B85C6B;
+}
+body { 
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:18px;
+  background-color: #F5D6E4;
+  color: #4A1F26 ;
+  margin: 0 ;
+}
+main {
+  padding: 20px;
+}
+section h2 {
+  color: #722F37; 
+  font-size:1.5em;
+  text-align:center;
+}
+section p {
+  color: #4A1F26;
+  text-align: center;
+}
+/* Container principal pour la mise en page */
+.main-container {
+  display: flex;              /* met les sections côte à côte */
+  gap: 40px;                  /* espace entre la section et les cartes */
+  justify-content: center;    /* centre horizontalement */
+  align-items: flex-start;    /* aligne en haut */
+  flex-wrap: wrap;            /* sur petit écran, les sections passent en dessous */
+}
+
+/* style pour la section "A propos" */
+.about-section {
+  border: 2px solid #8B3A4A;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  background-color: white ;
+  color: #4A1F26;
+  box-shadow: 0 4px 12px rgba(114, 47, 55, 0.15);
+}
+
+/* Section "À propos" complète pour la page d'accueil */
+.about-section-full {
+  background-color: white;
+  border: 2px solid #8B3A4A;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(114, 47, 55, 0.15);
+}
+
+.about-section-full p {
+  text-align: left;
+  line-height: 1.8;
+  margin: 15px 0;
+}
+
+/* Grille pour les cartes de navigation */
+.grid-container1 {
+  display: flex;
+  gap: 40px;
+}
+
+.grid-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  background: #8B3A4A;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(114, 47, 55, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover { 
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 8px 20px rgba(114, 47, 55, 0.4);
+}
+
+/* Cartes pour les informations (coordonnées, formation) */
+.info-card {
+  background-color: white ;
+  border: 2px solid #E8B4C4;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px auto ;
+  max-width: 500px;
+  box-shadow: rgba(114, 47, 55, 0.15);
+  transition : 0.3s ; 
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(114, 47, 55, 0.25);
+}
+
+.info-card h3 {
+  color: #722F37;
+  margin-top: 5px;
+  font-size: 20px;
+  border-bottom: 2px solid #E8B4C4;
+  
+}
+
+.info-card p {
+  color: #4A1F26;
+  margin: 10px 0;
+  text-align: left;
+}
+
+
+/* Cartes de projets */
+.project-card {
+  background-color: white;
+  border: 2px solid #E8B4C4;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px 0;
+  max-width: 350px;
+  box-shadow:  rgba(114, 47, 55, 0.15);
+  transition: 0.3s ;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(114, 47, 55, 0.25);
+  border-color: #B85C6B;
+}
+
+.project-card h3 {
+  color: #722F37;
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.project-card ul {
+  
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.project-card ul li {
+  color: #4A1F26;
+  padding: 8px ;
+  position: relative;
+}
+
+
+.project-card .pdf-link {
+  color: #8B3A4A;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.project-card .pdf-link:hover {
+  color: #722F37;
+  text-decoration: underline;
+}
+.project-card .epc-link {
+  color: #8B3A4A;
+  font-weight: bold;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.project-card .epc-link:hover {
+  color: #722F37;
+  text-decoration: underline;
+}
+
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #8B3A4A;
+  color: white;
+  padding: 15px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #F5D6E4;
+  text-decoration: underline;
+}
+
+/* design responsif comme vu en cours  */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .main-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .grid-container1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  header h1 {
+    font-size: 1.5em;
+    padding-right: 0;
+  }
+  
+  header p {
+    padding-right: 0 ;
+  }
+  
+  header figure img {
+    width: 100px;
+  }
+  
+  .info-card, .project-card {
+    max-width: 100%;
+  }
+}
+/* Styles pour le header genre la page d'accueil avec la photo */
+header figure {
+  margin: 0 0 10px 20px;
+  float: right;
+  text-align: center;
+  display: block;
+}
+
+header figure img {
+  width: 130px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #E8B4C4;
+  display : block ;
+}
+
+header figure figcaption {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  display: block ;
+  text-align: center;
+  padding: 8px;
+  background-color: #B85C6B;
+  border-radius: 5px;
+  width: 80%;
+ 
+}
+
+/* Styles pour les titres et textes du header */
+header h1 {
+  margin: 10px 0;
+  font-size: 2em;
+}
+
+header h1 {
+  padding-right: 160px;
+}
+
+header p {
+  margin: 8px 0;
+  padding-right: 160px;
+}
+
+/* Navigation dans le header */
+header nav {
+  margin-top: 15px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+header nav a:hover {
+  color: #F5D6E4;
+  text-decoration: underline;
+}
+
+/* Section compétences */
+.competence-item {
+  background-color: white;
+  border-left: 4px solid #8B3A4A;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+  
+}
+
+.competence-item h3 {
+  color: #722F37;
+  
+}
+
+.competence-item p {
+  color: #4A1F26;
+  text-align: left;
+  margin: 10px 0;
+}
+
+/* Section liens rapides */
+.quick-links {
+  margin: 50px 0;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  gap: 25px;
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.quick-link-card {
+  background-color: white;
+  border: 2px solid #E8B4C4;
+  border-radius: 15px;
+  padding: 25px;
+  text-decoration: none;
+  color: #4A1F26;
+  text-align: center;
+  box-shadow:  rgba(114, 47, 55, 0.15);
+  transition: 0.3s;
+  
+}
+
+.quick-link-card:hover {
+  transform: translateY(-8px);
+  box-shadow:  8px 15px rgba(114, 47, 55, 0.3);
+  border-color: #8B3A4A;
+  background: #F5D6E4;
+}
+
+.quick-link-card h3 {
+  color: #722F37;
+  margin: 0  0 10px 0 ;
+  font-size: 25px;
+}
+
+.quick-link-card p {
+  color: #4A1F26;
+  margin: 0;
+  font-size: 17px;
+  text-align: center;
+}
+
+/* Section projets */
+#projets {
+  margin: 50px ;
+}
+
+#competences {
+  margin: 40px ;
+}
+    
+/* === Formulaire contact === */
+.contact-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #8B3A4A;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(114, 47, 55, 0.15);
+}
+
+.contact-section h2 {
+  color: #722F37;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #722F37;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 2px solid #E8B4C4;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #B85C6B;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #B85C6B;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #722F37;
+  transform: translateY(-2px);
+}
+
+/* Responsive mobile */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 15px;
+    margin: 20px 10px;
+  }
+
+  .contact-form button {
+    font-size: 16px;
+  }
+}
